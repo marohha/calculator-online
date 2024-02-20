@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ededed;
+}
+
+.main {
+    max-width: 400px;
+    height: 100%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 25px 20px;
+    box-sizing: border-box;
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    justify-content: center;
+    height: 9vh;
+    margin: 0 auto;
+}
+
+.mode-dark_btn, .mode-light_btn {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px #ededed;
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+.mode-light_btn {
+    background-image: url('img/sun-2-svgrepo-com.png');
+}
+
+.mode-dark_btn {
+    margin-right: 7px;
+    background-image: url('img/moon-svgrepo-com.png');
+}
+
+.display  {
+    width: 100%;
+    height: 30vh;
+    background-color: white;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.display-value {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.buttons {
+    width: 100%;
+    height: 55vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fill);
+    gap: 5px;
+}
+
+.button {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 0px 4px 2px #ededed;
+    border-radius: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.btn-calc {
+    width: 100%;
+    grid-column: 3 / 5;
+    aspect-ratio: 1 / 0.48;
+    color: tomato;
+}
+
+.btn-right {
+    color: tomato;
+}
+
+.btn-top {
+    color: turquoise;
+}
