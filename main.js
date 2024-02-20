@@ -1,5 +1,7 @@
 let btnDark = document.getElementById('mode-dark_btn');
 let btnLight = document.querySelector('.mode-light_btn');
+let btnBox = document.querySelector('.buttons');
+let modeBox = document.querySelector('.mode');
 let calcBtns = Array.from(document.querySelectorAll('.button'));
 let btnFigure = document.querySelectorAll('.btn-figure');
 let display = document.querySelector('.display');
@@ -7,15 +9,16 @@ let main = document.querySelector('.main');
 let displayValue = document.querySelector('.display-value');
 
 btnDark.addEventListener('click', () => {
-    btnDark.style.backgroundColor = '#1f1f1f';
+    btnDark.style.backgroundColor = 'black';
     btnLight.style.backgroundImage = 'url(\'img/sun-2-svgrepo-com (1).png\')';
     btnDark.style.backgroundImage = 'url(\'img/moon-svgrepo-com (1).png\')';
-    btnLight.style.backgroundColor = '#1f1f1f';
-    display.style.backgroundColor = '#1f1f1f';
+    btnLight.style.backgroundColor = 'black';
+    display.style.backgroundColor = 'black';
     display.style.color = 'white';
-    main.style.backgroundColor = '#1f1f1f';
+    btnBox.style.backgroundColor = '#303030';
+    modeBox.style.backgroundColor = '#303030';
     calcBtns.forEach(e => {
-        e.style.backgroundColor = '#1f1f1f';
+        e.style.backgroundColor = 'black';
         e.style.boxShadow = '0px 0px 2px 2px #545454';
     });
     btnFigure.forEach(e => {
@@ -32,7 +35,8 @@ btnLight.addEventListener('click', () => {
     btnDark.style.backgroundImage = 'url(\'img/moon-svgrepo-com.png\')';
     display.style.backgroundColor = '#fff';
     display.style.color = 'black';
-    main.style.backgroundColor = '#fff';
+    btnBox.style.backgroundColor = '#dedede';
+    modeBox.style.backgroundColor = '#dedede';
     calcBtns.forEach(e => {
         e.style.backgroundColor = '#fff';
         e.style.boxShadow = '0px 0px 2px 2px #ededed';
@@ -44,15 +48,15 @@ btnLight.addEventListener('click', () => {
     btnLight.style.boxShadow = ('0px 0px 2px 2px #ededed');
 })
 
-calcBtns.forEach(e => {
-    e.addEventListener('mousedown', () => {
-        e.style.boxShadow = '0px 0px 0px 0px ';
-    });
-    // e.style.backgroundColor === '#fff' ? e.addEventListener('mouseup', () => { e.style.boxShadow = '0px 0px 2px 2px #ededed' }) : e.addEventListener('mouseup', () => { e.style.boxShadow = '0px 0px 2px 2px #545454' });
-    e.addEventListener('mouseup', () => {
-        e.style.boxShadow = '0px 0px 2px 2px #ededed';
-    });
-});
+// calcBtns.forEach(e => {
+//     e.addEventListener('mousedown', () => {
+//         e.style.boxShadow = '0px 0px 0px 0px ';
+//     });
+//     // e.style.backgroundColor === '#fff' ? e.addEventListener('mouseup', () => { e.style.boxShadow = '0px 0px 2px 2px #ededed' }) : e.addEventListener('mouseup', () => { e.style.boxShadow = '0px 0px 2px 2px #545454' });
+//     e.addEventListener('mouseup', () => {
+//         e.style.boxShadow = '0px 0px 2px 2px #ededed';
+//     });
+// });
 
 calcBtns.map(e => {
     e.addEventListener('click', (el) => {
